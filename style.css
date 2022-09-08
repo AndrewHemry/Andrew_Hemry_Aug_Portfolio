@@ -298,8 +298,9 @@ body div section:nth-of-type(2) {
 
 /* Contact Info */
 body div section:nth-of-type(3) {
-    margin: 20px 100px 20px 100px;
-    height: 225px;
+    margin: 20px auto 20px auto;
+    height: fit-content;
+    width: 775px;
 }
 
 body div section:nth-of-type(3) ul {
@@ -311,6 +312,54 @@ body div section:nth-of-type(3) ul {
 
 body div section:nth-of-type(3) ul li {
     list-style: none;
+}
+
+.contactGrid {
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: 1fr;
+    grid-template-rows:  120px repeat(3, 60px);
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+body div section:nth-of-type(3) ul li a img {
+    grid-row: 1;
+    margin: auto;
+}
+
+body div section:nth-of-type(3) ul li a h3 {
+    grid-row: 2;
+}
+
+body div section:nth-of-type(3) ul li a p {
+    grid-row: 3;
+}
+
+body div section:nth-of-type(3) ul li a button {
+    grid-row: 4;
+    color: white;
+    flex: auto;
+    font-size: 20px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    border: 3px solid #6a6a65;
+    background-color: #6a6a65;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow:hidden;
+    text-decoration: none;
+}
+
+body div section:nth-of-type(3) ul li button:hover {
+    border: 3px solid #16a6b6;
+    background-color: #16a6b6;    
+}
+
+.liSpacing {
+    padding: 12px;
 }
 
 /* Footer */
